@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,39 @@
     <title>Join</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
+
 <body>
-    
+    <div class="logo"><img src="assets/img/logo_blue.png"></div>
+    <div class="signup">
+        <button class="btn-plane">Not a Join user?</button>
+        <button class="btn btn-blue">Sign up</button>
+    </div>
+
+    <div class="center-box">
+        <div class="card card-box">
+            <div class="card-body card-center">
+                <h1 class="card-title">Log in</h1>
+
+                <form class="form-cont">
+                    <input type="email" placeholder="Email" class=" input-box">
+                    <input type="password" placeholder="Password" class=" input-box">
+                    <div class="form-remember">
+                        <label class="control control-checkbox">
+                            <input type="checkbox" checked="checked" name="remember" class="checkmark"> Remember me
+                            <div class="control_indicator"></div>
+                        </label>
+                        <p class="text-blue">Forgot my password</p>
+                    </div>
+                </form>
+                <div class="card-btn">
+                    <button class="btn btn-blue">Log in</button>
+                    <button class="btn btn-out-grey">Guest log in</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
