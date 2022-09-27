@@ -3,8 +3,13 @@ body {
     font-family: 'Open Sans', sans-serif !important;
 }
 
-h1{
+h1 {
     font-weight: 700 !important;
+}
+
+.title {
+    border-bottom: 3px solid #4589ff;
+    padding-bottom: 16px;
 }
 
 .logo {
@@ -45,7 +50,7 @@ h1{
     height: 440px !important;
     border: none !important;
     border-radius: 24px !important;
-    box-shadow: 0px 1px 12px 8px rgba(240 , 240, 240);
+    box-shadow: 0px 1px 12px 8px rgba(240, 240, 240);
 }
 
 .card-center {
@@ -55,17 +60,44 @@ h1{
     align-items: center;
 }
 
-.card-btn{
+.card-btn {
     width: 440px;
     display: flex;
-    justify-content: space-between;
-    padding: 16px;
+    justify-content: center;
+}
+
+.card-btn button {
+    padding-left: 24px;
+    padding-right: 24px;
+    margin: 24px;
 }
 
 .form-cont {
     display: flex;
     flex-direction: column;
     width: 440px;
+    margin-top: 24px;
+}
+
+.input-cont {
+    position: relative;
+}
+
+.input-cont img {
+    object-fit: cover;
+    height: 18px;
+    width: 20px;
+}
+
+.ipt-icon {
+    position: absolute;
+    bottom: 32px;
+    right: 24px;
+}
+
+.icon-lock {
+    height: 21px !important;
+    width: 18px !important;
 }
 
 .input-box {
@@ -73,6 +105,8 @@ h1{
     border-bottom: 1.5px solid rgb(209, 209, 209);
     height: 48px;
     margin-bottom: 16px;
+    width: 100%;
+    padding-left: 24px;
 }
 
 input:focus {
@@ -82,15 +116,19 @@ input:focus {
 .form-remember {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-left: 24px;
+    margin-right: 24px;
 }
 
 .btn-blue {
     background-color: rgb(69, 137, 255) !important;
     color: white !important;
 }
+
 .btn-blue:hover {
     background-color: rgb(0, 93, 255) !important;
+    box-shadow: 1px 4px 8px 0px rgb(117 117 117);
 }
 
 .btn-out-grey {
@@ -101,10 +139,11 @@ input:focus {
 .btn-out-grey:hover {
     border: 2px solid rgb(69, 137, 255) !important;
     color: rgb(69, 137, 255) !important;
+    box-shadow: 1px 4px 8px 0px rgb(117 117 117);
 }
 
 .text-blue {
-    color:rgb(69, 137, 255);
+    color: rgb(69, 137, 255);
 }
 
 
@@ -118,11 +157,13 @@ input:focus {
     cursor: pointer;
     font-size: 16px;
 }
-    .control input {
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-    }
+
+.control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
 .control_indicator {
     position: absolute;
     top: 6px;
@@ -133,32 +174,38 @@ input:focus {
     border: 2px solid rgb(69, 137, 255);
     border-radius: 4px;
 }
-.control:hover input ~ .control_indicator,
-.control input:focus ~ .control_indicator {
+
+.control:hover input~.control_indicator,
+.control input:focus~.control_indicator {
     background: #ffffff;
 }
 
-.control input:checked ~ .control_indicator {
+.control input:checked~.control_indicator {
     background: #ffffff;
 }
-.control:hover input:not([disabled]):checked ~ .control_indicator,
-.control input:checked:focus ~ .control_indicator {
+
+.control:hover input:not([disabled]):checked~.control_indicator,
+.control input:checked:focus~.control_indicator {
     background: #ffffff;
 }
-.control input:disabled ~ .control_indicator {
+
+.control input:disabled~.control_indicator {
     background: #e6e6e6;
     opacity: 0.6;
     pointer-events: none;
 }
+
 .control_indicator:after {
     box-sizing: unset;
     content: '';
     position: absolute;
     display: none;
 }
-.control input:checked ~ .control_indicator:after {
+
+.control input:checked~.control_indicator:after {
     display: block;
 }
+
 .control-checkbox .control_indicator:after {
     left: 6px;
     top: -6px;
@@ -168,9 +215,11 @@ input:focus {
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
 }
-.control-checkbox input:disabled ~ .control_indicator:after {
+
+.control-checkbox input:disabled~.control_indicator:after {
     border-color: #7b7b7b;
 }
+
 .control-checkbox .control_indicator::before {
     content: '';
     display: block;
@@ -187,5 +236,3 @@ input:focus {
     z-index: 99999;
     transform: scale(0);
 }
-
-
