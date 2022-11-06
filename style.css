@@ -16,6 +16,10 @@ h1 {
     position: absolute;
     top: 80px;
     left: 80px;
+    animation: slideInUpLeft 1.4s ease-in-out 500ms;
+    animation-fill-mode: backwards;
+    z-index: 3;
+    
 }
 
 .logo img {
@@ -146,6 +150,37 @@ input:focus {
     color: rgb(69, 137, 255);
 }
 
+/*start slider*/
+.start-cont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(69, 137, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    /*display: none;*/
+    /*transition: opacity 0.5s;*/
+   /* animation: fadeOut 225ms ease-in-out 1s;
+    animation-fill-mode: forwards;*/
+    /*opacity: 1;*/
+    animation-name: fadeOut;
+    animation-duration: 3s;  
+    animation-fill-mode: forwards;
+    
+}
+
+.start-logo img{
+    object-fit: cover;
+}
+
+.hidden {
+    opacity: 0;
+}
+
 
 /*customized checkbox*/
 .control {
@@ -235,4 +270,20 @@ input:focus {
     opacity: 0.6;
     z-index: 99999;
     transform: scale(0);
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes slideInUpLeft {
+    0% {
+        opacity: 0;
+        transform: translateY(300px) translateX(400px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+    }
 }
